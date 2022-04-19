@@ -54,22 +54,23 @@ public class test_audio_1 extends PApplet {
             float x3 = sin(radians(i)) * (500 / angle1);
             float y3 = cos(radians(i)) * (500 / angle1);
 
-            // fill(255, 255, 0); // yellow color
+            fill(255, 255, 0); // yellow color
             // fill(255, 69, 0);// orange color
-            fill(255, random(255), 255);
+            // fill(255, random(255), 255);
 
             ellipse(x, y, ap.left.get(i) * 10, ap.left.get(i) * 10);
 
             fill(255);// white color
             rect(x, y, ap.right.get(i) * 10, ap.left.get(i) * 10);
 
-            // fill(255, 69, 0);// orange color
+            fill(255, 69, 0);// orange color
             // fill(124, 252, 0); //grass green color
             // fill(255, 0, 0);//red color code
-            fill(random(0), 255, random(255));// aqua blue color code
+            // fill(random(0), 255, random(255));// aqua blue color code
             rect(x, y, ap.right.get(i) * 10, ap.left.get(i) * 10);
 
-            fill(random(255), random(255), random(255));// white color
+            // fill(random(255), random(255), random(255));// white color
+            fill(255, 255,255);// white color
             rect(x3, y3, ap.right.get(i) * 10, ap.right.get(i) * 20);
 
         }
