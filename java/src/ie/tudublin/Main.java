@@ -13,10 +13,16 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Audio());		
 	}
+	public void Ripple_Effect()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Ripple_Effect());		
+	}
 
 	public static void main(String[] args)
 	{
 		Main main = new Main();
-		main.Audio();			
+		// main.Audio();
+		main.Ripple_Effect();			
 	}
 }
