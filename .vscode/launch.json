@@ -7,5 +7,12 @@
             "mainClass": "ie.tudublin.Main",
             "projectName": "java"
         }
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "creed.Main",
+            "projectName": "java"
+        }
     ]
 }

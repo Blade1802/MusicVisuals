@@ -1,21 +1,19 @@
 package ie.tudublin;
 
-import example.CubeVisual;
-import example.MyVisual;
-import example.RotatingAudioBands;
+import creed.*;
 
 public class Main
 {	
 
-	public void startUI()
+	public void Audio()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new MyVisual());		
+        processing.core.PApplet.runSketch( a, new Audio());		
 	}
 
 	public static void main(String[] args)
 	{
 		Main main = new Main();
-		main.startUI();			
+		main.Audio();			
 	}
 }
