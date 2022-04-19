@@ -11,7 +11,7 @@
             "type": "java",
             "name": "CodeLens (Launch) - Main",
             "request": "launch",
-            "mainClass": "D20123625.Main",
+            "mainClass": "creed.Main",
             "projectName": "java"
         }
     ]
