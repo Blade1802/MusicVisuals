@@ -1,8 +1,16 @@
 # Music Visualiser Project
 
-Name:
+Student Name1: 		Aayush Gaur 
+Student Number1: 	C20396243
 
-Student Number: 
+Student Name2: 
+Student Number2: 
+
+Student Name1: 
+Student Number1: 
+
+Student Name1: 
+Student Number1: 
 
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
