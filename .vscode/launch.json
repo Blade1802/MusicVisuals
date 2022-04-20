@@ -6,6 +6,13 @@
             "request": "launch",
             "mainClass": "ie.tudublin.Main",
             "projectName": "java"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "c123456.Main",
+            "projectName": "java"
         }
     ]
 }
