@@ -10,10 +10,15 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Audio());		
 	}
+	public void MusicViz()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new MusicViz());		
+	}
 
 	public static void main(String[] args)
 	{
 		Main main = new Main();
-		main.Audio();			
+		main.MusicViz();			
 	}
 }

@@ -12,13 +12,14 @@ public class Audio extends PApplet {
     AudioInput ai;
     AudioBuffer ab;
 
-    int mode = 0;
+    int mode = 1;
 
     float[] lerpedBuffer;
     float lerpedAverage = 0;
     float y = 0;
     float smoothedY = 0;
     float smoothedAmplitude = 0;
+    float theta = 0.0f;
 
     public void keyPressed() {
         if (key >= '0' && key <= '9') {
@@ -35,7 +36,7 @@ public class Audio extends PApplet {
     }
 
     public void settings() {
-        size(1024, 1000);
+        size(600, 600);
         // fullScreen(P3D, SPAN);
     }
 
@@ -44,7 +45,7 @@ public class Audio extends PApplet {
         // Uncomment this to use the microphone
         // ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
         // ab = ai.mix;
-        ap = minim.loadFile("heroplanet.mp3", 1024);
+        ap = minim.loadFile("heroplanet.mp3", 600);
         ap.play();
         ab = ap.mix;
         colorMode(HSB);
@@ -63,6 +64,7 @@ public class Audio extends PApplet {
         float average = 0;
         float sum = 0;
         off += 1;
+        theta += 0.02;
         // Calculate sum and average of the samples
         // Also lerp each element of buffer;
         for (int i = 0; i < ab.size(); i++) {
@@ -75,6 +77,7 @@ public class Audio extends PApplet {
 
         float cx = width / 2;
         float cy = height / 2;
+        
 
         switch (mode)
         {
@@ -82,23 +85,39 @@ public class Audio extends PApplet {
                 background(0);
                 strokeWeight(2);
                 for (int i = 0; i < ab.size(); i+= 10) {
-
                     float c = map(i, 0, ab.size(), 0, 255);
                     float r = map(i, 0, 0.5f, 100, 2000);
                     float f = lerpedBuffer[i] * halfH * 4.0f;
                     stroke(c, 255, 255);
-                    lerpedBuffer[i] = lerp(lerpedBuffer[i], ab.get(i), 0.1f);        
-                    line(0, i, lerpedBuffer[i] * halfH * 4, i);
-                    line(width, i, width - (lerpedBuffer[i] * halfH * 4), i);
-                    line(i, 0, i, lerpedBuffer[i] * halfH * 4);
-                    line(i, height, i, height - (lerpedBuffer[i] * halfH * 4));
-                    // circle(cx, cy, r);
+                    lerpedBuffer[i] = lerp(lerpedBuffer[i], ab.get(i), 0.1f);  
                     circle(i, halfH + f, 5);
                     circle(i, halfH - f, 5);
                 }        
                 break;
             }
 
+        case 1:
+            background(0);
+            float angleOne = theta;
+            float angleTwo = theta;
+            for (int x = 0; x <= width; x += 10) {
+                // Calculate y value based off of sine function
+                float y = map(sin(angleTwo), -1, 1, halfH, halfH+100    );
+                // Draw an ellipse
+                ellipse(x, y, 10, 10);
+                // Increment angle
+                angleTwo -= 0.1;
+              }
+            for (int x = 0; x <= width; x += 10) {
+                // Calculate y value based off of sine function
+                float y = map(sin(angleOne), -1, 1, halfH, 100);
+                // Draw an ellipse
+                ellipse(x, y, 10, 10);
+                // Increment angle
+                angleOne += 0.1;
+              }
+              
+            break;
         }
 
     }
