@@ -40,6 +40,11 @@ public class Main {
 		processing.core.PApplet.runSketch(a, new Perlin_noise());
 	}
 
+	public void LuYu() {
+		String[] a = { "MAIN" };
+		processing.core.PApplet.runSketch(a, new LuYu_edit());
+	}
+
 	public static void main(String[] args) {
 		Main main = new Main();
 		// main.startUI();
@@ -48,6 +53,7 @@ public class Main {
 		// main.radioActive();
 		// main.recordPlayer();
 		// main.musicViz();
-		main.Perlin();
+		// main.Perlin();
+		main.LuYu();
 	}
 }
