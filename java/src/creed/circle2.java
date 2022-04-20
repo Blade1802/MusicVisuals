@@ -9,7 +9,7 @@ import ddf.minim.Minim;
 
 public class circle2 extends PApplet {
     Minim minim;
-    AudioPlayer mySound;
+    AudioPlayer ap;
     AudioInput ai;
     AudioBuffer ab;
 
@@ -31,11 +31,9 @@ public class circle2 extends PApplet {
 
     public void setup() {
         minim = new Minim(this);
-        mySound = minim.loadFile(
-                "creed.mp3", 1024);
-
-        mySound.play();
-        ab = mySound.mix;
+        ap = minim.loadFile("creed.mp3", 1024);
+        ap.play();
+        ab = ap.mix;
         // colorMode(HSB)
 
     }
@@ -46,12 +44,12 @@ public class circle2 extends PApplet {
         rect(0, 0, width, height);
         translate(width / 2, height / 2);
 
-        for (int i = 0; i < mySound.bufferSize() - 1; i++) {
+        for (int i = 0; i < ap.bufferSize() - 1; i++) {
 
-            float angle = sin(i + (n - 2)) * 40;
-            float x = sin(radians(i)) * (n / angle);
+            //float angle = sin(i + (n - 2)) * 40;
+            //float x = sin(radians(i)) * (n / angle);
 
-            float leftLevel = mySound.left.level() * 20;
+            float leftLevel = ap.left.level() * 20;
             ellipse(i, i, leftLevel, leftLevel);
             rotateZ((float) (n * -PI / 3 * 0.05));
 

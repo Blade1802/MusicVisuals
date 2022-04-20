@@ -28,17 +28,27 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new circle2());		
 	}
+	public void MusicViz()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new MusicViz());		
+	}
 
-
-
-
+	public void LuYu()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new LuYu());		
+	}
 
 	public static void main(String[] args)
 	{
 		Main main = new Main();
 		// main.Audio();
+		// main.Audio();
 		// main.Ripple_Effect();	
-		main.circle2();
+		// main.circle2();
+		// main.MusicViz();
+		main.LuYu();
 			
 	}
 }
