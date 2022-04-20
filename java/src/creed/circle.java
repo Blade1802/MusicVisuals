@@ -33,7 +33,7 @@ public class circle extends PApplet {
 
         ap.play();
         ab = ap.mix;
-        // colorMode(HSB);
+        // colorMode(HSB)
 
     }
 
