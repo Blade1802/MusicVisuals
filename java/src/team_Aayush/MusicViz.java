@@ -16,7 +16,7 @@ public class MusicViz extends PApplet {
     AudioMetaData meta;
     BeatDetect beat;
     int r = 200;
-    float rad = 100;
+    float rad = 0;
 
     public void settings() {
         size(800, 600, P3D);
@@ -41,12 +41,14 @@ public class MusicViz extends PApplet {
         float t = map(mouseX, 0, width, 0, 1);
         beat.detect(ap.mix);
         fill(26, 31, 24);
+        // fill(0);
 
         noStroke();
         rect(0, 0, width, height);
         translate(width / 2, height / 2);
         noFill();
-        fill(-1, 10);
+        // fill(-1, 10);
+        fill(random(255), random(255), random(255));
         if (beat.isOnset())
             rad = (float) (rad * 0.9);
         else
