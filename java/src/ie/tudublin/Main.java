@@ -1,9 +1,6 @@
 package ie.tudublin;
 
-// import example.CubeVisual;
-// import example.MyVisual;
-import team_Aayush.*;
-// import example.RotatingAudioBands;
+import creed.*;
 
 public class Main {
 
@@ -38,6 +35,11 @@ public class Main {
 		processing.core.PApplet.runSketch(a, new MusicViz());
 	}
 
+	public void Perlin() {
+		String[] a = { "MAIN" };
+		processing.core.PApplet.runSketch(a, new Perlin_noise());
+	}
+
 	public static void main(String[] args) {
 		Main main = new Main();
 		// main.startUI();
@@ -45,6 +47,7 @@ public class Main {
 		// main.Circle_Pattern();
 		// main.radioActive();
 		// main.recordPlayer();
-		main.musicViz();
+		// main.musicViz();
+		main.Perlin();
 	}
 }
