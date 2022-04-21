@@ -50,6 +50,11 @@ public class Main {
 		processing.core.PApplet.runSketch(a, new Mesh_Line());
 	}
 
+	public void flower() {
+		String[] a = { "MAIN" };
+		processing.core.PApplet.runSketch(a, new Flower_Random());
+	}
+
 
 	public static void main(String[] args) {
 		Main main = new Main();
@@ -61,7 +66,8 @@ public class Main {
 		// main.musicViz();
 		// main.Perlin();
 		// main.LuYu();
-		main.MeshLine();
+		// main.MeshLine();
+		main.flower();
 
 	}
 }
