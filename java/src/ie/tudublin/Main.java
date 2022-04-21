@@ -55,6 +55,10 @@ public class Main {
 		processing.core.PApplet.runSketch(a, new Flower_Random());
 	}
 
+	public void osclliopscope() {
+		String[] a = { "MAIN" };
+		processing.core.PApplet.runSketch(a, new Oscilloscope());
+	}
 
 	public static void main(String[] args) {
 		Main main = new Main();
@@ -67,7 +71,8 @@ public class Main {
 		// main.Perlin();
 		// main.LuYu();
 		// main.MeshLine();
-		main.flower();
+		// main.flower();
+		main.osclliopscope();
 
 	}
 }
