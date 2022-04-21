@@ -45,6 +45,11 @@ public class Main {
 		processing.core.PApplet.runSketch(a, new LuYu_edit());
 	}
 
+	public void MeshLine() {
+		String[] a = { "MAIN" };
+		processing.core.PApplet.runSketch(a, new Mesh_Line());
+	}
+
 
 	public static void main(String[] args) {
 		Main main = new Main();
@@ -55,6 +60,8 @@ public class Main {
 		// main.recordPlayer();
 		// main.musicViz();
 		// main.Perlin();
-		main.LuYu();
+		// main.LuYu();
+		main.MeshLine();
+
 	}
 }
