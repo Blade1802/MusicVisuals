@@ -39,6 +39,11 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new LuYu());		
 	}
+	public void Flower()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Flower());		
+	}
 
 	public static void main(String[] args)
 	{
@@ -46,9 +51,10 @@ public class Main
 		// main.Audio();
 		// main.Audio();
 		// main.Ripple_Effect();	
-		// main.circle2();
+		main.circle2();
 		// main.MusicViz();
-		main.LuYu();
+		// main.LuYu();
+		// main.Flower();
 			
 	}
 }
