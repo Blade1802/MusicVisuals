@@ -6,7 +6,11 @@ import ddf.minim.AudioPlayer;
 // import ddf.minim.signals.*;//for case 2
 import ddf.minim.Minim;
 import ddf.minim.analysis.BeatDetect;
+import ddf.minim.analysis.FFT;
+import ddf.minim.BeatDetector;
 import processing.core.PApplet;
+import processing.sound.*;
+
 
 public class waterRipple extends PApplet {
     Minim minim;
@@ -14,6 +18,8 @@ public class waterRipple extends PApplet {
     AudioInput ai;
     AudioBuffer ab;
     BeatDetect beat;
+    BeatDetector beat2;
+    FFT fft;
 
     // arrays for water effect
     int cols = 200;

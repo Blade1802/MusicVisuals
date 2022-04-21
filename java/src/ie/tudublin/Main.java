@@ -14,6 +14,12 @@ public class Main
         processing.core.PApplet.runSketch( a, new MyVisual());		
 	}
 
+	public void rotating()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new RotatingAudioBands());		
+	}
+
 	public void circle2()
 	{
 		String[] a = {"MAIN"};
@@ -30,7 +36,8 @@ public class Main
 	{
 		Main main = new Main();
 		// main.circle2();
-		main.waterRipple();
+		// main.waterRipple();
+		main.rotating();
 			
 	}
 }
