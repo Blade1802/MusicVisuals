@@ -50,14 +50,28 @@ public class Main
         processing.core.PApplet.runSketch( a, new Audio1());		
 	}
 
+	public void LuYu()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new LuYu());		
+	}
+
+	public void Mesh_Line()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Mesh_Line());		
+	}
+
 	public static void main(String[] args)
 	{
 		Main main = new Main();
 		// main.circle2();
-		main.waterRipple();
+		// main.waterRipple();
 		// main.rotating();
 		// main.BeatListener();
 		// main.Audio2();
 		// main.Audio1();
+		// main.LuYu();
+		main.Mesh_Line();
 	}
 }

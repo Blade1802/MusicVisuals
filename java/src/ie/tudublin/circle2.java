@@ -41,7 +41,7 @@ public class circle2 extends PApplet {
         ab = ap.mix;
         beat = new BeatDetect();
         beat.setSensitivity(100);
-        // colorMode(HSB)
+        colorMode(HSB);
 
     }
 
@@ -72,14 +72,15 @@ public class circle2 extends PApplet {
                 c = (c + 1) % 7;
                 //fill(RGBval[c][0], RGBval[c][1], RGBval[c][2]);
                 //fill(c1++%256,c2++%256,c3++%256);
-                
+                float c = map(i, 0, ap.bufferSize(), 0, 255);
+                fill(c,255,255);
                 
                 
             }
             // c = (c + 1) % 7;
             // fill(RGBval[c][0], RGBval[c][1], RGBval[c][2]);
-            fill(c1++%256,c2++%256,c3++%256);
             // fill(c1++%256,c2++%256,c3++%256);
+            
 
         }
 

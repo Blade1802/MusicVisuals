@@ -133,22 +133,21 @@ public class Audio2 extends PApplet
 
         // Fill out missing code!!
 
-        float freq = fft.indexToFreq(maxIndex);
-        // float freq = fft.getFreq(400);
+        // float freq = fft.indexToFreq(maxIndex);
+        float freq = fft.indexToFreq(maxIndex) / 40;
         textSize(20);
         fill(255);
         text("Freq: " + freq, 100, 200);
 
-        float prevfreq = 300;
-        if(freq - prevfreq >= 1000)
+        
+        if(freq > 15)
         {
             int x = (int)random((float)cols);
             int y = (int)random((float)rows);
             current[x][y] = 255;
         }
 
-        if(prevfreq - freq < 400)
-            prevfreq = freq;
+       
 
     }        
 }
