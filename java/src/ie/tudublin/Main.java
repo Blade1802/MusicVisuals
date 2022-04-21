@@ -26,18 +26,38 @@ public class Main
         processing.core.PApplet.runSketch( a, new circle2());		
 	}
 
+	public void BeatListener()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new BeatListener());		
+	}
+
 	public void waterRipple()
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new waterRipple());		
 	}
 
+	public void Audio2()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Audio2());		
+	}
+
+	public void Audio1()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Audio1());		
+	}
+
 	public static void main(String[] args)
 	{
 		Main main = new Main();
 		// main.circle2();
-		// main.waterRipple();
-		main.rotating();
-			
+		main.waterRipple();
+		// main.rotating();
+		// main.BeatListener();
+		// main.Audio2();
+		// main.Audio1();
 	}
 }

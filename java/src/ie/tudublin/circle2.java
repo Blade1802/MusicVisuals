@@ -40,6 +40,7 @@ public class circle2 extends PApplet {
         ap.play();
         ab = ap.mix;
         beat = new BeatDetect();
+        beat.setSensitivity(100);
         // colorMode(HSB)
 
     }

@@ -7,9 +7,8 @@ import ddf.minim.AudioPlayer;
 import ddf.minim.Minim;
 import ddf.minim.analysis.BeatDetect;
 import ddf.minim.analysis.FFT;
-import ddf.minim.BeatDetector;
 import processing.core.PApplet;
-import processing.sound.*;
+;
 
 
 public class waterRipple extends PApplet {
@@ -18,7 +17,6 @@ public class waterRipple extends PApplet {
     AudioInput ai;
     AudioBuffer ab;
     BeatDetect beat;
-    BeatDetector beat2;
     FFT fft;
 
     // arrays for water effect
@@ -44,6 +42,7 @@ public class waterRipple extends PApplet {
         ap.play();
         ab = ap.mix;
         beat = new BeatDetect();
+        beat.setSensitivity(50);
 
         cols = width;
         rows = height;
@@ -64,8 +63,8 @@ public class waterRipple extends PApplet {
         loadPixels();
         if(beat.isOnset())
         {
-            int x = (int)random((float)cols);
-            int y = (int)random((float)rows);
+            int x = 200 + (int)random((float)cols - 400);
+            int y = 100 + (int)random((float)rows - 200);
             current[x][y] = 255;
         }
         for (int i = 1; i < cols - 1; i++) 
