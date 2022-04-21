@@ -22,9 +22,16 @@ public class Main
         processing.core.PApplet.runSketch( a, new RippleEffect());		
 	}
 
+	public void tapePlayer()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new TapePlayer());		
+	}
+
+
 	public static void main(String[] args)
 	{
 		Main main = new Main();
-		main.ripple();			
+		main.tapePlayer();			
 	}
 }
