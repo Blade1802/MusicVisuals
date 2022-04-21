@@ -16,9 +16,15 @@ public class Main
         processing.core.PApplet.runSketch( a, new MusicViz());		
 	}
 
+	public void ripple()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new RippleEffect());		
+	}
+
 	public static void main(String[] args)
 	{
 		Main main = new Main();
-		main.MusicViz();			
+		main.ripple();			
 	}
 }

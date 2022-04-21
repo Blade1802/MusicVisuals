@@ -46,10 +46,10 @@ public class Audio extends PApplet {
         // ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
         // ab = ai.mix;
         ap = minim.loadFile("heroplanet.mp3", 600);
-        ap.play();
+        
         ab = ap.mix;
         colorMode(HSB);
-
+        c
         y = height / 2;
         smoothedY = y;
 
@@ -57,6 +57,14 @@ public class Audio extends PApplet {
     }
 
     float off = 0;
+
+    public void toggle(){
+        if(ap.isPlaying()){
+            ap.play();
+        }else{
+            ap.pause();
+        }
+    }
 
     public void draw() {
         // background(0);
@@ -118,6 +126,10 @@ public class Audio extends PApplet {
               }
               
             break;
+
+        case 2:
+              background(0);
+              break;
         }
 
     }
