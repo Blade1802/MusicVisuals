@@ -45,6 +45,7 @@ public class Main {
 		processing.core.PApplet.runSketch(a, new LuYu_edit());
 	}
 
+
 	public static void main(String[] args) {
 		Main main = new Main();
 		// main.startUI();

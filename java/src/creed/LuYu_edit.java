@@ -30,7 +30,7 @@ public class LuYu_edit extends PApplet {
         // colorMode(HSB)
         // frameRate(15);
 
-        bg = loadImage("wp9152367-abstract-dark-4k-wallpapers.jpg");
+        // bg = loadImage("wp9152367-abstract-dark-4k-wallpapers.jpg");
     }
 
     int n = 0;
