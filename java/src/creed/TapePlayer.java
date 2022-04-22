@@ -23,12 +23,15 @@ public class TapePlayer extends PApplet {
 
     public void settings() {
         size(1920, 1080, P3D);
+
     }
 
     public void setup() {
         colorMode(RGB);
         // fullScreen();
         noCursor();
+        frameRate(200);
+
 
         minim = new Minim(this);
 
@@ -43,6 +46,23 @@ public class TapePlayer extends PApplet {
 
         background = loadImage("wallpaper.jpg");
         imageMode(CENTER);
+        background(0);
+        imageMode(CENTER);
+        image(background, 0, 0,1920,1080);
+        loadPixels();
+        background.loadPixels();
+        for(int x=0; x<width-1;x++){
+          for(int y =0; y<height; y++){
+            int loc1 = x+y*width;
+            int loc2 = (x+1) +y*width;
+            float b1 = brightness(background.pixels[loc1]);
+            float b2 = brightness(background.pixels[loc2]);
+            
+            float diff = abs(b1-b2);
+            pixels[loc1] = color(diff);
+            }
+        }  
+        updatePixels();
     }
 
     public void draw() {
@@ -50,7 +70,20 @@ public class TapePlayer extends PApplet {
         background(0);
         imageMode(CENTER);
         image(background, 0, 0,1920,1080);
-        filter(BLUR,6);
+        loadPixels();
+        background.loadPixels();
+        for(int x=0; x<width-1;x++){
+          for(int y =0; y<height; y++){
+            int loc1 = x+y*width;
+            int loc2 = (x+1) +y*width;
+            float b1 = brightness(background.pixels[loc1]);
+            float b2 = brightness(background.pixels[loc2]);
+            
+            float diff = abs(b1-b2);
+            pixels[loc1] = color(diff);
+            }
+        }  
+        updatePixels();
 
 
         // Create circle interior

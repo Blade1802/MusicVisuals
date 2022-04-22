@@ -49,7 +49,7 @@ public class Audio extends PApplet {
         
         ab = ap.mix;
         colorMode(HSB);
-        c
+        
         y = height / 2;
         smoothedY = y;
 
