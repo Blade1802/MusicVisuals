@@ -35,11 +35,6 @@ public class Main {
 		processing.core.PApplet.runSketch(a, new MusicViz());
 	}
 
-	public void Perlin() {
-		String[] a = { "MAIN" };
-		processing.core.PApplet.runSketch(a, new Perlin_noise());
-	}
-
 	public void LuYu() {
 		String[] a = { "MAIN" };
 		processing.core.PApplet.runSketch(a, new LuYu_edit());
@@ -68,11 +63,10 @@ public class Main {
 		// main.radioActive();
 		// main.recordPlayer();
 		// main.musicViz();
-		// main.Perlin();
 		// main.LuYu();
-		// main.MeshLine();
+		main.MeshLine();
 		// main.flower();
-		main.osclliopscope();
+		// main.osclliopscope();
 
 	}
 }

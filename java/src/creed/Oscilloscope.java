@@ -39,7 +39,8 @@ public class Oscilloscope extends PApplet {
 
     public void draw() {
         background(0);
-        translate(0, height/2);
+        colorMode(HSB);
+        translate(0, height / 2);
         stroke(255);
         // draw the output waveforms, so there's something to look at
         // first grab a stationary copy
@@ -59,9 +60,13 @@ public class Oscilloscope extends PApplet {
         // plot out that waveform
         int mylen = min(tbase, myBuffer.length - offset);
         for (int i = 0; i < mylen - 1; i++) {
+            fill((frameCount + i / 2) % 360, 80, 100);
+
             float x1 = map(i, 0, tbase, 0, width);
             float x2 = map(i + 1, 0, tbase, 0, width);
+
             line(x1, 100 - myBuffer[i + offset] * gain, x2, 100 - myBuffer[i + 1 + offset] * gain);
+
         }
     }
 
