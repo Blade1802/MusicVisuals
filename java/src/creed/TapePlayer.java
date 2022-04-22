@@ -22,7 +22,7 @@ public class TapePlayer extends PApplet {
     int radius = 200; // Radius in pixels of the circle
 
     public void settings() {
-        size(1920, 1080, P3D);
+        size(1280, 720, P3D);
 
     }
 
@@ -44,11 +44,11 @@ public class TapePlayer extends PApplet {
 
         x = 0;
 
-        background = loadImage("wallpaper.jpg");
+        background = loadImage("image2.jpg");
         imageMode(CENTER);
         background(0);
         imageMode(CENTER);
-        image(background, 0, 0,1920,1080);
+        image(background, 0, 0,1280,720);
         loadPixels();
         background.loadPixels();
         for(int x=0; x<width-1;x++){
@@ -69,7 +69,7 @@ public class TapePlayer extends PApplet {
         translate(width / 2, height / 2);
         background(0);
         imageMode(CENTER);
-        image(background, 0, 0,1920,1080);
+        image(background, 0, 0,1280,720);
         loadPixels();
         background.loadPixels();
         for(int x=0; x<width-1;x++){
