@@ -57,10 +57,10 @@ public class Main {
 	public static void main(String[] args) {
 		Main main = new Main();
 		// main.startUI();
-		main.Circle_Effect();
+		// main.Circle_Effect();
 		// main.radioActive();
 		// main.recordPlayer();
-		// main.musicViz();
+		main.musicViz();
 		// main.LuYu();
 		// main.MeshLine();
 		// main.flower();

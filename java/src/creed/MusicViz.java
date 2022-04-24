@@ -8,6 +8,8 @@ import ddf.minim.Minim;
 import ddf.minim.analysis.*;
 import ddf.minim.*;
 import processing.core.PApplet;
+import processing.core.PImage;
+
 
 public class MusicViz extends PApplet {
 
@@ -18,11 +20,17 @@ public class MusicViz extends PApplet {
     int r = 200;
     float rad = 0;
 
+    // Image
+    PImage bg;
+
     public void settings() {
         size(800, 600, P3D);
     }
 
     public void setup() {
+
+        // using background image
+        bg = loadImage("assassins creed.jpg");
 
         minim = new Minim(this);
         ap = minim.loadFile(
@@ -32,13 +40,14 @@ public class MusicViz extends PApplet {
 
         ap.loop();
         // player.play();
-        background(0);
+        // background(0);
         noCursor();
 
     }
 
     public void draw() {
-        float t = map(mouseX, 0, width, 0, 1);
+        background(0);
+        // float t = map(mouseX, 0, width, 0, 1);
         beat.detect(ap.mix);
         fill(26, 31, 24);
         // fill(0);
@@ -48,7 +57,8 @@ public class MusicViz extends PApplet {
         translate(width / 2, height / 2);
         noFill();
         // fill(-1, 10);
-        fill(random(255), random(255), random(255));
+        // fill(random(255), random(255), random(255));
+        fill(255, 255, 255);
         if (beat.isOnset())
             rad = (float) (rad * 0.9);
         else
@@ -99,7 +109,7 @@ public class MusicViz extends PApplet {
 
     //
     // public boolean sketchFullScreen() {
-    //     return true;
+    // return true;
     // }
 
     public void keyPressed() {
