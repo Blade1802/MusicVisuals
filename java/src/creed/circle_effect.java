@@ -7,7 +7,7 @@ import ddf.minim.AudioPlayer;
 import ddf.minim.Minim;
 import processing.core.PApplet;
 
-public class test_audio_1 extends PApplet {
+public class circle_effect extends PApplet {
     Minim minim;
     AudioPlayer ap;
     AudioInput ai;
@@ -61,7 +61,7 @@ public class test_audio_1 extends PApplet {
             ellipse(x, y, ap.left.get(i) * 10, ap.left.get(i) * 10);
 
             fill(255);// white color
-            rect(x, y, ap.right.get(i) * 10, ap.left.get(i) * 10);
+            rect(x, y, ap.right.get(i) * 10, ap.left.get(i) * 10);//10 -> 20
 
             fill(255, 69, 0);// orange color
             // fill(124, 252, 0); //grass green color

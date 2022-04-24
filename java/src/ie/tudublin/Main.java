@@ -12,7 +12,7 @@ public class Main {
 
 	public void Circle_Effect() {
 		String[] a = { "MAIN" };
-		processing.core.PApplet.runSketch(a, new test_audio_1());
+		processing.core.PApplet.runSketch(a, new circle_effect());
 	}
 
 	public void radioActive() {
@@ -57,7 +57,7 @@ public class Main {
 	public static void main(String[] args) {
 		Main main = new Main();
 		// main.startUI();
-		// main.Circle_Effect();
+		main.Circle_Effect();
 		// main.radioActive();
 		// main.recordPlayer();
 		// main.musicViz();
@@ -65,7 +65,7 @@ public class Main {
 		// main.MeshLine();
 		// main.flower();
 		// main.osclliopscope();
-		main.Ripple();
+		// main.Ripple();
 
 	}
 }
