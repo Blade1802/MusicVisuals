@@ -8,6 +8,7 @@ import ddf.minim.AudioInput;
 import ddf.minim.AudioPlayer;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class Oscilloscope extends PApplet {
     Minim minim;
@@ -19,9 +20,14 @@ public class Oscilloscope extends PApplet {
     int tbase = 1024;
     float[] myBuffer;
 
+    // for background Image
+    PImage bg;
+
     public void settings() {
         // size(1024, 800, P3D);
-        fullScreen(P3D);
+        size(1920, 1080);
+
+        // fullScreen();
         smooth();
     }
 
@@ -35,13 +41,20 @@ public class Oscilloscope extends PApplet {
         ab = ap.mix;
 
         myBuffer = new float[ap.bufferSize()];
+
+        bg = loadImage("assassins creed.jpg");
     }
 
     public void draw() {
-        background(0);
+        // background(0);
+        tint(255, 126);  // Apply transparency without changing color
+
+        background(bg);
+
         colorMode(HSB);
         translate(0, height / 2);
         stroke(255);
+        strokeWeight(2);
         // draw the output waveforms, so there's something to look at
         // first grab a stationary copy
         for (int i = 0; i < ap.bufferSize(); ++i) {

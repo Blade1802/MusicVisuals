@@ -70,9 +70,9 @@ public class Main {
 		// main.LuYu();
 		// main.MeshLine();
 		// main.flower();
-		// main.osclliopscope();
+		main.osclliopscope();
 		// main.Ripple();
-		main.case_menu();
+		// main.case_menu();
 
 	}
 }
