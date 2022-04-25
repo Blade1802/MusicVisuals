@@ -22,7 +22,6 @@ public class Oscilloscope extends PApplet {
 
     // for background Image
     PImage bg;
-    PImage img;
 
     public void settings() {
         // size(1024, 800, P3D);
@@ -45,8 +44,6 @@ public class Oscilloscope extends PApplet {
 
         bg = loadImage("assassins creed edited.png");
 
-        img = loadImage("assassins_creed_logo.png");
-
     }
 
     // PImage creed = loadImage("assassins creed.jpg");
@@ -62,9 +59,7 @@ public class Oscilloscope extends PApplet {
         noFill();
         strokeWeight(3);
 
-        image(img, 200, 400, width / 2, height / 2);
-
-        ellipse(width / 2, height / 2, 280, 280);
+        ellipse(width / 2, height / 2, 240, 240);
 
         translate(0, height / 2);
         stroke(255);
