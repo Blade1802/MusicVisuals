@@ -54,6 +54,12 @@ public class Main {
 		String[] a = { "MAIN" };
 		processing.core.PApplet.runSketch(a, new waterRipple());
 	}
+
+	public void case_menu() {
+		String[] a = { "MAIN" };
+		processing.core.PApplet.runSketch(a, new switch_menu());
+	}
+
 	public static void main(String[] args) {
 		Main main = new Main();
 		// main.startUI();
