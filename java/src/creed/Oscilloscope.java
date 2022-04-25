@@ -25,10 +25,10 @@ public class Oscilloscope extends PApplet {
 
     public void settings() {
         // size(1024, 800, P3D);
-        size(1920, 1080);
+        // size(1920, 1080);
 
-        // fullScreen();
-        smooth();
+        fullScreen(P3D, SPAN);
+        // smooth();
     }
 
     public void setup() {
@@ -43,18 +43,22 @@ public class Oscilloscope extends PApplet {
         myBuffer = new float[ap.bufferSize()];
 
         bg = loadImage("assassins creed.jpg");
+
     }
 
+    // PImage creed = loadImage("assassins creed.jpg");
+
     public void draw() {
-        // background(0);
-        tint(255, 126);  // Apply transparency without changing color
-
+        // colorMode(HSB);
+        colorMode(RGB);
+        tint(255);
+        // tint(0, 110, 190);
         background(bg);
+        // background(creed);
 
-        colorMode(HSB);
         translate(0, height / 2);
         stroke(255);
-        strokeWeight(2);
+        strokeWeight(3);
         // draw the output waveforms, so there's something to look at
         // first grab a stationary copy
         for (int i = 0; i < ap.bufferSize(); ++i) {
