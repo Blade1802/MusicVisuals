@@ -66,12 +66,13 @@ public class Main {
 		// main.Circle_Effect();
 		// main.radioActive();
 		// main.recordPlayer();
-		main.musicViz();
-		// main.LuYu();
+		// main.musicViz();
+		main.LuYu();
 		// main.MeshLine();
 		// main.flower();
 		// main.osclliopscope();
 		// main.Ripple();
+		// main.case_menu();
 
 	}
 }

@@ -152,7 +152,7 @@ public class Mesh_Line extends PApplet {
                 // Create circle interior
                 noStroke();
                 fill(200, 0, 0);
-                circle(0, 0, 120); // White circle
+                circle(0, 0, 100); // White circle
                 fill(255);
                 circle(cos(radians(x)) * 5, sin(radians(x)) * 5, 80); // Red circle
                 fill(0);
