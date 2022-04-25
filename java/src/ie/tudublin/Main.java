@@ -67,12 +67,12 @@ public class Main {
 		// main.radioActive();
 		// main.recordPlayer();
 		// main.musicViz();
-		main.LuYu();
+		// main.LuYu();
 		// main.MeshLine();
 		// main.flower();
 		// main.osclliopscope();
 		// main.Ripple();
-		// main.case_menu();
+		main.case_menu();
 
 	}
 }

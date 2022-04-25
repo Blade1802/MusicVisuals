@@ -80,7 +80,7 @@ public class switch_menu extends PApplet {
 
     public void settings() {
         size(1024, 600, P3D);
-        // fullScreen(P3D, SPAN);
+        // fullScreen(P3D);
         smooth();
     }
 
@@ -90,7 +90,7 @@ public class switch_menu extends PApplet {
         // ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
         // ab = ai.mix;
         ap = minim.loadFile(
-                "[YT2mp3.info] - Assassin_'s Creed II   Ezio_'s Family (Dubstep Remix) Remake (320kbps).mp3", 1024);
+                "[YT2mp3.info] - Assassin_'s Creed II   Ezio_'s Family (Dubstep Remix) Remake (320kbps).mp3", 2048);
         ap.play();
         ab = ap.mix;
         beat = new BeatDetect();
@@ -222,6 +222,8 @@ public class switch_menu extends PApplet {
 
             case 2: {
                 // Mesh Line effect with Tape recorder
+                background(0);
+                colorMode(HSB);
 
                 float halfH = height / 2;
                 float average = 0;
@@ -238,9 +240,6 @@ public class switch_menu extends PApplet {
                 average = sum / (float) ab.size();
 
                 smoothedAmplitude = lerp(smoothedAmplitude, average, 0.1f);
-
-                background(0);
-                colorMode(HSB);
 
                 strokeWeight(2);
                 for (int i = 0; i < ab.size(); i += 10) {
@@ -352,4 +351,4 @@ public class switch_menu extends PApplet {
         super.stop();
     }
 
-}//end class switch_menu
+}// end class switch_menu
