@@ -55,8 +55,6 @@ public class Oscilloscope extends PApplet {
         // colorMode(HSB);
         colorMode(RGB);
 
-        image(img, 200, 400, width / 2, height / 2);
-
         tint(256);
         background(bg);
 
@@ -64,11 +62,14 @@ public class Oscilloscope extends PApplet {
         noFill();
         strokeWeight(3);
 
+        image(img, 200, 400, width / 2, height / 2);
+
         ellipse(width / 2, height / 2, 280, 280);
 
         translate(0, height / 2);
         stroke(255);
         strokeWeight(2);
+
         // draw the output waveforms, so there's something to look at
         // first grab a stationary copy
         for (int i = 0; i < ap.bufferSize(); ++i) {
