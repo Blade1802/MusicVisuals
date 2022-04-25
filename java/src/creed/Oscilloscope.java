@@ -22,6 +22,7 @@ public class Oscilloscope extends PApplet {
 
     // for background Image
     PImage bg;
+    PImage img;
 
     public void settings() {
         // size(1024, 800, P3D);
@@ -42,7 +43,9 @@ public class Oscilloscope extends PApplet {
 
         myBuffer = new float[ap.bufferSize()];
 
-        bg = loadImage("assassins creed.jpg");
+        bg = loadImage("assassins creed edited.png");
+
+        img = loadImage("assassins_creed_logo.png");
 
     }
 
@@ -51,14 +54,21 @@ public class Oscilloscope extends PApplet {
     public void draw() {
         // colorMode(HSB);
         colorMode(RGB);
-        tint(255);
-        // tint(0, 110, 190);
+
+        image(img, 200, 400, width / 2, height / 2);
+
+        tint(256);
         background(bg);
-        // background(creed);
+
+        stroke(255);
+        noFill();
+        strokeWeight(3);
+
+        ellipse(width / 2, height / 2, 280, 280);
 
         translate(0, height / 2);
         stroke(255);
-        strokeWeight(3);
+        strokeWeight(2);
         // draw the output waveforms, so there's something to look at
         // first grab a stationary copy
         for (int i = 0; i < ap.bufferSize(); ++i) {
@@ -81,8 +91,12 @@ public class Oscilloscope extends PApplet {
 
             float x1 = map(i, 0, tbase, 0, width);
             float x2 = map(i + 1, 0, tbase, 0, width);
+            float x3 = map(i * 2 + 10, 0, tbase, 0, width);
+            float x4 = map(i * 2 + 12, 0, tbase, 0, width);
 
             line(x1, 100 - myBuffer[i + offset] * gain, x2, 100 - myBuffer[i + 1 + offset] * gain);
+
+            line(x3, 100 - myBuffer[i + offset] * gain, x4, 100 - myBuffer[i + 1 + offset] * gain);
 
         }
     }
