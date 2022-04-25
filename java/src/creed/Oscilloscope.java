@@ -1,10 +1,10 @@
 package creed;
 
-import ddf.minim.analysis.*;
+// import ddf.minim.analysis.*;
 import ddf.minim.*;
-import ddf.minim.signals.*;
+// import ddf.minim.signals.*;
 import ddf.minim.AudioBuffer;
-import ddf.minim.AudioInput;
+// import ddf.minim.AudioInput;
 import ddf.minim.AudioPlayer;
 
 import processing.core.PApplet;

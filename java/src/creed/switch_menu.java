@@ -10,6 +10,7 @@ import ddf.minim.analysis.*;
 import ddf.minim.*;
 import processing.core.PApplet;
 
+
 public class switch_menu extends PApplet {
     int mode = 0; // for keyPressed
 

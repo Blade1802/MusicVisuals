@@ -92,8 +92,8 @@ public class Mesh_Line extends PApplet {
 
         smoothedAmplitude = lerp(smoothedAmplitude, average, 0.1f);
 
-        float cx = width / 2;
-        float cy = height / 2;
+        // float cx = width / 2;
+        // float cy = height / 2;
 
         switch (mode) {
             case 0: {
@@ -104,7 +104,7 @@ public class Mesh_Line extends PApplet {
                 for (int i = 0; i < ab.size(); i += 10) {
 
                     float c = map(i, 0, ab.size(), 0, 255);
-                    float r = map(i, 0, 0.5f, 100, 2000);
+                    // float r = map(i, 0, 0.5f, 100, 2000);
                     float f = lerpedBuffer[i] * halfH * 4.0f;
                     stroke(c, 255, 255);
                     lerpedBuffer[i] = lerp(lerpedBuffer[i], ab.get(i), 0.1f);

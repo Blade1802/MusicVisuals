@@ -1,12 +1,12 @@
 package creed;
 
-import ddf.minim.AudioBuffer;
-import ddf.minim.AudioInput;
+// import ddf.minim.AudioBuffer;
+// import ddf.minim.AudioInput;
 import ddf.minim.AudioPlayer;
 // import ddf.minim.signals.*;//for case 2
 import ddf.minim.Minim;
 import ddf.minim.analysis.*;
-import ddf.minim.*;
+// import ddf.minim.*;
 import processing.core.PApplet;
 
 public class Tape_Player extends PApplet {
