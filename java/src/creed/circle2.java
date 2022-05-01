@@ -36,7 +36,7 @@ public class circle2 extends PApplet {
 
     public void setup() {
         minim = new Minim(this);
-        ap = minim.loadFile("[YT2mp3.info] - Assassin_'s Creed II   Ezio_'s Family (Dubstep Remix) Remake (320kbps).mp3", 1024);
+        ap = minim.loadFile("[YT2mp3.info] - Assassin_'s Creed II   Ezio_'s Family (Dubstep Remix) Remake (320kbps).mp3", 2048);
         ap.play();
         ab = ap.mix;
         beat = new BeatDetect();
