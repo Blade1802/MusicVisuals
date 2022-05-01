@@ -35,8 +35,8 @@ public class Audio extends PApplet {
     }
 
     public void settings() {
-        size(1024, 500);
-        // fullScreen(P3D, SPAN);
+        // size(1024, 500);
+        fullScreen(P3D, SPAN);
     }
 
     public void setup() {
@@ -44,7 +44,7 @@ public class Audio extends PApplet {
         // Uncomment this to use the microphone
         // ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
         // ab = ai.mix;
-        ap = minim.loadFile("creed.mp3", 1024);
+        ap = minim.loadFile("creed.mp3", 2048);
         ap.play();
         ab = ap.mix;
         colorMode(HSB);
@@ -52,7 +52,7 @@ public class Audio extends PApplet {
         y = height / 2;
         smoothedY = y;
 
-        lerpedBuffer = new float[width];
+        lerpedBuffer = new float[2048];
     }
 
     float off = 0;
@@ -81,7 +81,7 @@ public class Audio extends PApplet {
             case 0: {
                 background(0);
                 strokeWeight(2);
-                for (int i = 0; i < ab.size(); i+= 10) {
+                for (int i = 0; i < ab.size(); i+= 5) {
 
                     float c = map(i, 0, ab.size(), 0, 255);
                     float r = map(i, 0, 0.5f, 100, 2000);

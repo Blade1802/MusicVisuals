@@ -6,12 +6,14 @@ import ddf.minim.AudioInput;
 import ddf.minim.AudioPlayer;
 // import ddf.minim.signals.*;//for case 2
 import ddf.minim.Minim;
+import ddf.minim.analysis.BeatDetect;
 
 public class circle2 extends PApplet {
     Minim minim;
     AudioPlayer ap;
     AudioInput ai;
     AudioBuffer ab;
+    BeatDetect beat;
 
     // circle particle effect
     float n = 0;
@@ -21,6 +23,9 @@ public class circle2 extends PApplet {
 
     int c = 0;
     int[][] RGBval = { {255, 0, 0}, {255, 165, 0}, {255, 255, 0}, {0, 128, 0}, {0, 0, 255}, {75, 0, 130}, {238, 130, 238} };
+    int c1 = 51;
+    int c2 = 204;
+    int c3 = 255;
 
     public void settings() {
         size(1024, 800, P3D);
@@ -34,11 +39,14 @@ public class circle2 extends PApplet {
         ap = minim.loadFile("creed.mp3", 1024);
         ap.play();
         ab = ap.mix;
-        // colorMode(HSB)
+        beat = new BeatDetect();
+        beat.setSensitivity(100);
+        colorMode(HSB);
 
     }
 
     public void draw() {
+        beat.detect(ab);
         fill(0, 20);
         noStroke();
         rect(0, 0, width, height);
@@ -55,10 +63,24 @@ public class circle2 extends PApplet {
 
             
             //fill(51,204,255); // Light Blue
-            fill(RGBval[c][0], RGBval[c][1], RGBval[c][2]); // Light Blue
-            c = (c + 1) % 7;
-            //System.out.println(c1 + " " + c2 + " " + c3);
-            //fill(i%255,i%255,i%255);
+            //fill(RGBval[c][0], RGBval[c][1], RGBval[c][2]); // Light Blue
+            // float color1 = map(i, 0, ap.bufferSize(), 0, 255);
+            //fill(color1, 255, 255);
+            
+            if(beat.isOnset())
+            {
+                c = (c + 1) % 7;
+                //fill(RGBval[c][0], RGBval[c][1], RGBval[c][2]);
+                //fill(c1++%256,c2++%256,c3++%256);
+                float c = map(i, 0, ap.bufferSize(), 0, 255);
+                fill(c,255,255);
+                
+                
+            }
+            // c = (c + 1) % 7;
+            // fill(RGBval[c][0], RGBval[c][1], RGBval[c][2]);
+            fill(c1++%256,c2++%256,c3++%256);
+            
 
         }
 
