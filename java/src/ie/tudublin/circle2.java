@@ -23,7 +23,6 @@ public class circle2 extends PApplet {
         // size(1024, 800, P3D);
         fullScreen(P3D, SPAN);
         smooth();
-        // frameRate(24);
     }
 
     public void setup() {
