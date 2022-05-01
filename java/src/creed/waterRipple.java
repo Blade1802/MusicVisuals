@@ -31,6 +31,7 @@ public class waterRipple extends PApplet {
 
     public void settings() {
         size(800, 600);
+        // fullScreen(P3D, SPAN);
     }
 
     public void setup() {

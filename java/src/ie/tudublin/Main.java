@@ -55,6 +55,11 @@ public class Main {
 		processing.core.PApplet.runSketch(a, new switch_menu());
 	}
 
+	public void circle_2() {
+		String[] a = { "MAIN" };
+		processing.core.PApplet.runSketch(a, new circle2());
+	}
+
 	public static void main(String[] args) {
 		Main main = new Main();
 		// main.startUI();
@@ -67,6 +72,7 @@ public class Main {
 		// main.osclliopscope();
 		// main.Ripple();
 		// main.case_menu();
+		main.circle_2();
 
 	}
 }
