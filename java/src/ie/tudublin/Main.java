@@ -35,11 +35,6 @@ public class Main {
 		processing.core.PApplet.runSketch(a, new Mesh_Line());
 	}
 
-	public void flower() {
-		String[] a = { "MAIN" };
-		processing.core.PApplet.runSketch(a, new Flower_Random());
-	}
-
 	public void osclliopscope() {
 		String[] a = { "MAIN" };
 		processing.core.PApplet.runSketch(a, new Oscilloscope());
@@ -68,11 +63,10 @@ public class Main {
 		// main.musicViz();
 		// main.LuYu();
 		// main.MeshLine();
-		// main.flower();
 		// main.osclliopscope();
-		// main.Ripple();
+		main.Ripple();
 		// main.case_menu();
-		main.circle_2();
+		// main.circle_2();
 
 	}
 }
