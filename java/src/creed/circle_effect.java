@@ -18,8 +18,8 @@ public class circle_effect extends PApplet {
     float n6 = 0;
 
     public void settings() {
-        size(1024, 800, P3D);
-        // fullScreen(P3D);
+        // size(1024, 800, P3D);
+        fullScreen(P3D, SPAN);
         smooth();
         // frameRate(24);
     }

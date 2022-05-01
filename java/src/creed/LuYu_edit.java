@@ -16,7 +16,7 @@ public class LuYu_edit extends PApplet {
 
     public void settings() {
         // size(1024, 800, P3D);
-        fullScreen(P3D);
+        fullScreen(P3D, SPAN);
         smooth();
         // frameRate(24);
     }

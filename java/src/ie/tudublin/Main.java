@@ -15,11 +15,6 @@ public class Main {
 		processing.core.PApplet.runSketch(a, new circle_effect());
 	}
 
-	public void radioActive() {
-		String[] a = { "MAIN" };
-		processing.core.PApplet.runSketch(a, new radiohead_visual());
-	}
-
 	public void recordPlayer() {
 		String[] a = { "MAIN" };
 		processing.core.PApplet.runSketch(a, new Tape_Player());
@@ -64,13 +59,12 @@ public class Main {
 		Main main = new Main();
 		// main.startUI();
 		// main.Circle_Effect();
-		// main.radioActive();
 		// main.recordPlayer();
 		// main.musicViz();
 		// main.LuYu();
 		// main.MeshLine();
 		// main.flower();
-		main.osclliopscope();
+		// main.osclliopscope();
 		// main.Ripple();
 		// main.case_menu();
 
