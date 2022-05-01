@@ -65,13 +65,13 @@ public class Main
 	public static void main(String[] args)
 	{
 		Main main = new Main();
-		// main.circle2();
+		main.circle2();
 		// main.waterRipple();
 		// main.rotating();
 		// main.BeatListener();
 		// main.Audio2();
 		// main.Audio1();
 		// main.LuYu();
-		main.Mesh_Line();
+		// main.Mesh_Line();
 	}
 }
