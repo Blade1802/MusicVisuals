@@ -9,6 +9,8 @@ public class Visualiser extends Visual {
     MusicViz musicViz_obj;
     Oscilloscope oscilloscope_obj;
     LuYu luyu_obj;
+    circle_effect circle_effect_obj;
+    Mesh_Line mesh_line_obj;
 
     public void settings() {
         // size(1024, 800, P3D);
@@ -42,6 +44,8 @@ public class Visualiser extends Visual {
         musicViz_obj = new MusicViz(this);
         oscilloscope_obj = new Oscilloscope(this);
         luyu_obj = new LuYu(this);
+        circle_effect_obj = new circle_effect(this);
+        mesh_line_obj = new Mesh_Line(this);
     }
 
     public void draw() {
@@ -74,13 +78,13 @@ public class Visualiser extends Visual {
 
             case 4:
             {
-                // cs.render();
+                circle_effect_obj.render();
                 break;
             }
 
             case 5:
             {
-                // cs.render();
+                mesh_line_obj.render();
                 break;
             }
 
