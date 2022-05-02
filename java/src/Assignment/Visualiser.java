@@ -5,7 +5,7 @@ import ie.tudublin.*;
 
 public class Visualiser extends Visual {
     // Class Objects
-    // circlesub cs;
+    circle circle;
 
     public void settings() {
         // size(1024, 800, P3D);
@@ -35,7 +35,7 @@ public class Visualiser extends Visual {
         getAudioPlayer().play();
 
         // Object Intialisation
-        // cs = new circlesub(this);
+        circle = new circle(this);
     }
 
     public void draw() {
@@ -44,7 +44,7 @@ public class Visualiser extends Visual {
         {
             case 0:
             {
-                // cs.render();
+                circle.render();
                 break;
             }
 
