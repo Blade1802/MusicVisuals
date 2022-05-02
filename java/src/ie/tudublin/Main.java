@@ -60,10 +60,10 @@ public class Main {
 		// main.startUI();
 		// main.Circle_Effect();
 		// main.recordPlayer();
-		// main.musicViz();
+		main.musicViz();
 		// main.LuYu();
 		// main.MeshLine();
-		main.osclliopscope();
+		// main.osclliopscope();
 		// main.Ripple();
 		// main.case_menu();
 		// main.circle_2();

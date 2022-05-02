@@ -8,7 +8,6 @@ import ddf.minim.Minim;
 import ddf.minim.analysis.*;
 import ddf.minim.*;
 import processing.core.PApplet;
-import processing.core.PImage;
 
 
 public class MusicViz extends PApplet {
@@ -17,20 +16,17 @@ public class MusicViz extends PApplet {
     AudioPlayer ap;
     AudioMetaData meta;
     BeatDetect beat;
-    int r = 200;
+    int r = 300;
     float rad = 0;
 
-    // Image
-    PImage bg;
 
     public void settings() {
-        size(800, 600, P3D);
+        // size(800, 600, P3D);
+        fullScreen(P3D, SPAN);
     }
 
     public void setup() {
 
-        // using background image
-        bg = loadImage("assassins creed.jpg");
 
         minim = new Minim(this);
         ap = minim.loadFile(
@@ -49,7 +45,7 @@ public class MusicViz extends PApplet {
         background(0);
         // float t = map(mouseX, 0, width, 0, 1);
         beat.detect(ap.mix);
-        fill(26, 31, 24);
+        // fill(26, 31, 24);
         // fill(0);
 
         noStroke();
@@ -68,19 +64,19 @@ public class MusicViz extends PApplet {
         int bsize = ap.bufferSize();
 
         for (int i = 0; i < bsize - 1; i += 5) {
-            float x = (r) * cos(i * 2 * PI / bsize);
-            float y = (r) * sin(i * 2 * PI / bsize);
-            float x2 = (r + ap.left.get(i) * 100) * cos(i * 2 * PI / bsize);
-            float y2 = (r + ap.left.get(i) * 100) * sin(i * 2 * PI / bsize);
+            float x = (r) * cos(i * 3 * PI / bsize);
+            float y = (r) * sin(i * 3 * PI / bsize);
+            float x2 = (r + ap.left.get(i) * 100) * cos(i * 3 * PI / bsize);
+            float y2 = (r + ap.left.get(i) * 100) * sin(i * 3 * PI / bsize);
             line(x, y, x2, y2);
         }
 
         beginShape();
         noFill();
         stroke(-1, 50);
-        for (int i = 0; i < bsize; i += 30) {
-            float x2 = (r + ap.left.get(i) * 100) * cos(i * 2 * PI / bsize);
-            float y2 = (r + ap.left.get(i) * 100) * sin(i * 2 * PI / bsize);
+        for (int i = 0; i < bsize; i += 60) {
+            float x2 = (r + ap.left.get(i) * 100) * cos(i * 4 * PI / bsize);
+            float y2 = (r + ap.left.get(i) * 100) * sin(i * 4 * PI / bsize);
             vertex(x2, y2);
             pushStyle();
             stroke(-1);
