@@ -20,10 +20,12 @@ Student Number4: 	D20123668</br>
 - Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
 
 # Description of the assignment
+This project uses .java files
 
 # Instructions
 
 # How it works
+
 
 # What I am most proud of in the assignment
 

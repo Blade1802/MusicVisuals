@@ -28,6 +28,12 @@ public class Main
         processing.core.PApplet.runSketch( a, new TapePlayer());		
 	}
 
+	public void circle()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Circle());		
+	}
+
 
 	public static void main(String[] args)
 	{

@@ -6,7 +6,7 @@
             "request": "launch",
             "mainClass": "ie.tudublin.Main",
             "projectName": "java"
-        }
+        },
         {
             "type": "java",
             "name": "CodeLens (Launch) - Main",
