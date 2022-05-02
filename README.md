@@ -20,10 +20,11 @@ Student Number4: 	D20123668</br>
 This project uses .java files and processing to add an animated component to the audio file for visualization. It uses the beats, and frequency of the audio file to change the sketch and color effect.
 
 # How it works
+The main function calls the visualiser function that later calls each individual render function for the respetive key pressed and switch condition satisfied.
+Our program works on the cases. Each cases has a different effect. On every beats and drop and silence, we change between the cases manually. To avoid any distortion it changes very smoothly.
 This is an audio visualiser that uses the concepts of polymorphism by classifying seven different for classes and then creating an object of each individual class in the visualiser class the inistialising in setup and lastly, calling the render function that will the draw the expected sketch. 
 Inside each individual class we again create a visualiser object that we later use in render function.
-The main function calls the visualiser function that later calls each individual render function for the respetive key pressed and switch condition satisfied.
-Afer calling, our main File Visualiser.java will run. Our program works on the cases. Each cases has a different effect. On every beats and drops and silence, We change between the cases manually. Without any distortion it changes very smoothly.
+
 
 # What we are most proud of in the assignment
 We are proud of the overall project it was a bit challenging however, we had fun acquiring new processing and java skills. The challenges we overcame in the descending order are as follows:
@@ -36,13 +37,8 @@ We are proud of the overall project it was a bit challenging however, we had fun
 - Our song is from the Assassins Creed Video games. So, we wanted to add blur background images that 
 
 
-# Markdown Tutorial
-
-#### EMPHASIS
-create something unique 
-- beat based
-- color vibrant pattern
-- color and effect changes on beats eg- circle.java
+# EMPHASIS
+Our motto for this project was to create something unique as a result we decided to develop the visualisation and transition on beats instead of creating the sketch and adding the music just as aa background. The color and effect changes on beats in addition to vibrant color patterns. 
 
 
 This is a [hyperlink](http://bryanduggan.org)
@@ -76,6 +72,21 @@ public void render()
 	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
 	ui.text(text, x + width * 0.5f, y + height * 0.5f);
 }
+```
+
+This is an image using a relative URL:
+
+![An image](images/p8.png)
+
+This is an image using an absolute URL:
+
+![A different image](https://bryanduggandotorg.files.wordpress.com/2019/02/infinite-forms-00045.png?w=595&h=&zoom=2)
+
+This is a youtube video:
+
+[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
+
+This is a table:
 
 | Heading 1 | Heading 2 |
 |-----------|-----------|
