@@ -41,9 +41,7 @@ public class Audio extends PApplet {
 
     public void setup() {
         minim = new Minim(this);
-        // Uncomment this to use the microphone
-        // ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
-        // ab = ai.mix;
+        
         ap = minim.loadFile("creed.mp3", 2048);
         ap.play();
         ab = ap.mix;
@@ -58,7 +56,7 @@ public class Audio extends PApplet {
     float off = 0;
 
     public void draw() {
-        // background(0);
+        
         float halfH = height / 2;
         float average = 0;
         float sum = 0;

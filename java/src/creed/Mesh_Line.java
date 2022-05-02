@@ -3,7 +3,6 @@ package creed;
 import ddf.minim.AudioBuffer;
 import ddf.minim.AudioInput;
 import ddf.minim.AudioPlayer;
-// import ddf.minim.signals.*;//for case 2
 import ddf.minim.Minim;
 import ddf.minim.analysis.BeatDetect;
 import ddf.minim.analysis.FFT;
@@ -36,8 +35,7 @@ public class Mesh_Line extends PApplet {
     // arrays for water effect
     int cols = 200;
     int rows = 200;
-    // float[][] current = new float[cols][rows];
-    // float[][] previous = new float[cols][rows];
+    
 
     float[][] current;
     float[][] previous;
@@ -53,28 +51,15 @@ public class Mesh_Line extends PApplet {
     float gain = 200;
     int tbase = 1024;
     float[] myBuffer;
-    // float[] lerpedBuffer2;
+    
     float lerpedAverage = 0;
     float y = 0;
     float smoothedY = 0;
     float smoothedAmplitude = 0;
 
-    public void keyPressed() {
-        if (key >= '0' && key <= '9') {
-            mode = key - '0';
-        }
-        if (keyCode == ' ') {
-            if (ap.isPlaying()) {
-                ap.pause();
-            } else {
-                ap.rewind();
-                ap.play();
-            }
-        }
-    }
 
     public void settings() {
-        // size(1024, 800, P3D);
+    
         fullScreen(P3D, SPAN);
     }
 
@@ -83,9 +68,6 @@ public class Mesh_Line extends PApplet {
         noCursor();
 
         minim = new Minim(this);
-        // Uncomment this to use the microphone
-        // ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
-        // ab = ai.mix;
         ap = minim.loadFile(
                 "creed.mp3", 2048);
         ap.play();
@@ -114,7 +96,7 @@ public class Mesh_Line extends PApplet {
     float off = 0;
 
     public void mousePressed() {
-        // previous[mouseX][mouseY] = 255;
+        
         current[mouseX][mouseY] = 255;
 
     }
@@ -130,7 +112,7 @@ public class Mesh_Line extends PApplet {
         for (int i = 0; i < ab.size(); i++) {
             sum += abs(ab.get(i));
             lerpedBuffer[i] = lerp(lerpedBuffer[i], ab.get(i), 0.05f);
-            // lerpedBuffer2[i] = lerp(lerpedBuffer2[i], ab.get(i), 0.05f);
+            
 
         }
         average = sum / (float) ab.size();

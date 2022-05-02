@@ -60,13 +60,13 @@ public class Main
 	{
 		Main main = new Main();
 		// main.Audio();
-		// main.Mesh_Line();
+		main.Mesh_Line();
 		// main.TapePlayer();
 		// main.Audio();
 		// main.Ripple_Effect();	
 		// main.circle2();
 		// main.Oscilloscope();
-		main.MusicViz();
+		// main.MusicViz();
 		// main.LuYu();
 		// main.Flower();
 			
