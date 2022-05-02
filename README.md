@@ -34,13 +34,9 @@ We are proud of the overall project it was a bit challenging however, we had fun
 
 
 
-# Markdown Tutorial
+# EMPHASIS
 
-#### EMPHASIS
-create something unique 
-- beat based
-- color vibrant pattern
-- color and effect changes on beats eg- circle.java
+Our motto for this project was to create something unique as a result we decided to develop the visualisation and transition on beats instead of creating the sketch and adding the music just as aa background. The color and effect changes on beats in addition to vibrant color patterns. 
 
 
 This is a [hyperlink](http://bryanduggan.org)
