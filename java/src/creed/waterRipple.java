@@ -30,8 +30,11 @@ public class waterRipple extends PApplet {
     float dampening = (float) 0.93;
 
     public void settings() {
-        size(1000, 800,  P3D);
-        fullScreen(P3D, SPAN);
+        // size(1000, 800,  P3D);
+        // fullScreen(P3D, SPAN);
+
+        size(displayWidth, displayHeight);
+        fullScreen(SPAN);
         smooth();
     }
 

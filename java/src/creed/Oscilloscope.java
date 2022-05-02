@@ -29,8 +29,12 @@ public class Oscilloscope extends PApplet {
     PImage bg;
 
     public void settings() {
-        fullScreen(P3D, SPAN);
-        // size(800, 400, P3D);
+        // fullScreen(P3D, SPAN);
+        // // size(800, 400, P3D);
+        // smooth();
+
+        size(displayWidth, displayHeight);
+        fullScreen(SPAN);
         smooth();
     }
 

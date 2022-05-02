@@ -14,8 +14,8 @@ public class circle_effect extends PApplet {
     AudioBuffer ab;
 
     // circle particle effect
-    float n4 = 0;
-    float n6 = 0;
+    float n4 = 100;
+    float n6 = 100;
 
     public void settings() {
         // size(1024, 800, P3D);
@@ -58,11 +58,14 @@ public class circle_effect extends PApplet {
             // fill(255, random(255), 255);
 
             ellipse(x, y, ap.left.get(i) * 10, ap.left.get(i) * 10);
+            // ellipse(x, y, ap.left.get(i) * 2, ap.left.get(i) * 2);
+
 
             fill(255);// white color
             rect(x, y, ap.right.get(i) * 10, ap.left.get(i) * 10);//10 -> 20
 
             fill(255, 69, 0);// orange color
+            // fill(192,192,192);//silver color
             // fill(124, 252, 0); //grass green color
             // fill(255, 0, 0);//red color code
             // fill(random(0), 255, random(255));// aqua blue color code
