@@ -12,26 +12,32 @@ Student Number3: 	</br>
 Student Name4: 		Khushboo Jayan</br>
 Student Number4: 	D20123668</br>
 
-## Instructions
-- Fork this repository and use it a starter project for your assignment
-- Create a new package named your student number and put all your code in this package.
-- You should start by creating a subclass of ie.tudublin.Visual
-- There is an example visualiser called MyVisual in the example package
-- Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
+## Instructions 
+- Fork this repository.
 
 # Description of the assignment
-This project uses .java files
-
-# Instructions
+This project uses .java files and processing to add an animated component to the audio file for visualization. 
 
 # How it works
-
+This is an audio visualiser that uses the concepts of polymorphism by classifying seven different for classes and then creating an object of each individual class in the visualiser class the inistialising in setup and lastly, calling the render function that will the draw the expected sketch. 
+Inside each individual class we again create a visualiser object that we later use in render function.
 
 # What I am most proud of in the assignment
+We are proud of the overall project it was a bit challenging however, we had fun acquiring new processing and java skills. The challenges we overcame in the descending order are as follows:
+- Water ripple effect - This was the most challenging part of the assignment. was really difficult to create each water drop effect that can respond to the beat of the sound. mouse click, added to the song, added on the beats, multiple ripple effect to the same beat bcuz multiple instruments were playing at the same time.
+- The most crucial part was using the map function  to create a vibrant RGB color palette. 
+- Secondly, it was a bit difficult in creating the LUYU effect octopus effect using circles. 
+- Oscilloscope - able to creat two distinct lines which responds to every bit and amplitude of the song in their own nature. also, there is a circle behind it which does.
+
+
 
 # Markdown Tutorial
 
-This is *emphasis*
+This is *emphasis* - 
+create something unique 
+- beat based
+- color vibrant pattern
+- color and effect changes on beats eg- circle.java
 
 This is a bulleted list
 
