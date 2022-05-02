@@ -16,14 +16,14 @@ public class Flower extends PApplet {
     AudioBuffer ab;
     AudioInput ai;
     public void settings() {
-        size(1024, 800, P3D);
-        // fullScreen(P3D);
+        // size(1024, 800, P3D);
+        fullScreen(P3D,SPAN);
         smooth();
         // frameRate(24);
     }
     public void setup() {
         minim = new Minim(this);
-        ap = minim.loadFile("creed.mp3", 1024);
+        ap = minim.loadFile("creed.mp3", 2048);
         ap.play();
         ab = ap.mix;
         // colorMode(HSB)

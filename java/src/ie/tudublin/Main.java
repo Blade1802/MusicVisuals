@@ -49,16 +49,24 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Mesh_Line());		
 	}
+	public void Oscilloscope()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Oscilloscope());		
+	}
+	
 
 	public static void main(String[] args)
 	{
 		Main main = new Main();
 		// main.Audio();
 		// main.Mesh_Line();
+		// main.TapePlayer();
 		// main.Audio();
 		// main.Ripple_Effect();	
-		main.circle2();
-		// main.MusicViz();
+		// main.circle2();
+		// main.Oscilloscope();
+		main.MusicViz();
 		// main.LuYu();
 		// main.Flower();
 			

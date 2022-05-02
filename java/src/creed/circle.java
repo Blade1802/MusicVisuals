@@ -1,7 +1,5 @@
 package creed;
 
-
-
 import ddf.minim.AudioBuffer;
 import ddf.minim.AudioInput;
 import ddf.minim.AudioPlayer;
@@ -20,20 +18,20 @@ public class circle extends PApplet {
     float n6 = 0;
 
     public void settings() {
-        size(1024, 800, P3D);
-        // fullScreen(P3D);
+        // size(1024, 800, P3D);
+        fullScreen(P3D, SPAN);
         smooth();
-        // frameRate(24);
+        
     }
 
     public void setup() {
         minim = new Minim(this);
         ap = minim.loadFile(
-                "creed.mp3", 1024);
+                "creed.mp3", 2048);
 
         ap.play();
         ab = ap.mix;
-        // colorMode(HSB)
+        // colorMode(HSB);
 
     }
 
@@ -56,22 +54,23 @@ public class circle extends PApplet {
             float x3 = sin(radians(i)) * (500 / angle1);
             float y3 = cos(radians(i)) * (500 / angle1);
 
-            // fill(255, 255, 0); // yellow color
+            fill(255, 255, 0); // yellow color
             // fill(255, 69, 0);// orange color
-            fill(255, random(255), 255);
+            // fill(255, random(255), 255);
 
             ellipse(x, y, ap.left.get(i) * 10, ap.left.get(i) * 10);
 
             fill(255);// white color
-            rect(x, y, ap.right.get(i) * 10, ap.left.get(i) * 10);
+            rect(x, y, ap.right.get(i) * 10, ap.left.get(i) * 10);//10 -> 20
 
-            // fill(255, 69, 0);// orange color
+            fill(255, 69, 0);// orange color
             // fill(124, 252, 0); //grass green color
             // fill(255, 0, 0);//red color code
-            fill(random(0), 255, random(255));// aqua blue color code
+            // fill(random(0), 255, random(255));// aqua blue color code
             rect(x, y, ap.right.get(i) * 10, ap.left.get(i) * 10);
 
-            fill(random(255), random(255), random(255));// white color
+            // fill(random(255), random(255), random(255));// white color
+            fill(255, 255,255);// white color
             rect(x3, y3, ap.right.get(i) * 10, ap.right.get(i) * 20);
 
         }

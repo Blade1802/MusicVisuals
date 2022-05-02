@@ -13,7 +13,7 @@ public class MusicViz extends PApplet {
 
     Minim minim;
     AudioPlayer ap;
-    AudioMetaData meta;
+    // AudioMetaData meta;
     BeatDetect beat;
     int r = 200;
     float rad = 0;
@@ -23,19 +23,20 @@ public class MusicViz extends PApplet {
     float lerpedAverage = 0;
 
     public void settings() {
-        size(800, 600, P3D);
+        // size(800, 600, P3D);
+        fullScreen(P3D,SPAN);
     }
 
     public void setup() {
 
         minim = new Minim(this);
         ap = minim.loadFile(
-                "creed.mp3", 1024);
-        meta = ap.getMetaData();
+                "creed.mp3", 2048);
+        // meta = ap.getMetaData();
         beat = new BeatDetect();
 
         ap.loop();
-        // player.play();
+        
         background(0);
         noCursor();
         lerpedBuffer = new float[width];
@@ -58,7 +59,7 @@ public class MusicViz extends PApplet {
         if (beat.isOnset())
             rad = (float) (rad * 0.9);
         else
-            rad = 70;
+            rad = 70; 
 
         // ellipse(0, 0, 2 * rad, 2 * rad);
         stroke(-1, 50);
@@ -88,34 +89,8 @@ public class MusicViz extends PApplet {
             popStyle();
         }
         endShape();
-
-        // if (flag)
-        // showMeta();
     }
 
-    public void showMeta() {
-        int time = meta.length();
-        textSize(50);
-        textAlign(CENTER);
-        text((int) (time / 1000 - millis() / 1000) / 60 + ":" + (time / 1000 - millis() / 1000) % 60, -7, 21);
-    }
 
-    boolean flag = false;
 
-    public void mousePressed() {
-        if (dist(mouseX, mouseY, width / 2, height / 2) < 150)
-            flag = !flag;
-    }
-
-    //
-    // public boolean sketchFullScreen() {
-    // return true;
-    // }
-
-    public void keyPressed() {
-        if (key == ' ')
-            exit();
-        if (key == 's')
-            saveFrame("###.jpeg");
-    }
 }
