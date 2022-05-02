@@ -30,7 +30,7 @@ We are proud of the overall project it was a bit challenging however, we had fun
 - Creating the octopus effect using circles for LUYU.java. 
 - For oscilloscope.java create two distinct lines which responds to every bit and amplitude of the song in their own nature in addition to creation of two concentric circles that change their radii on the amplitude and frequency as well.
 - Strings vibrating with the music, in every effect there is unique motion and transition. 
-- Our song is from the Assassins Creed Video games. So, we wanted to add blur background images after spending some time on implementing that part we observe that background images is not looking good with our every effect, So we did not use background images for our Project. It was a very good and new thing we learn after doing it. Our images are saved in Data folder. Please checkout some cool images for assassins creed. 
+- Our song is from the Assassins Creed Video games. So, we wanted to add blur background images after spending some time on implementing that part we observed that  if we add background image there is a lag for drawing the sketch. As a result, we did not use background images for our Project. We learnt a lot about pixels and image processing. Our images are saved in Data folder as well as we have a java file that uses the pixel brightness effect to create an outline effect. Please checkout some cool images for assassins creed as well the the code it MusicViz.java file in 'Khushboo' and 'AyanAudio branch'. 
 
 
 # Emphasis
