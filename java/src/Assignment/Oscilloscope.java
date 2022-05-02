@@ -29,7 +29,10 @@ public class Oscilloscope {
     public void render() {
         pa.colorMode(PApplet.HSB);
         // colorMode(RGB);
-        pa.background(0);
+        // pa.background(0);
+        pa.fill(0, 60);
+        pa.noStroke();
+        pa.rect(0, 0, pa.width, pa.height);
 
         pa.stroke(255);
         pa.noFill();
