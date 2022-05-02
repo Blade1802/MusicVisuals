@@ -11,6 +11,7 @@ public class Visualiser extends Visual {
     LuYu luyu_obj;
     circle_effect circle_effect_obj;
     Mesh_Line mesh_line_obj;
+    waterRipple waterRipple_obj;
 
     public void settings() {
         // size(1024, 800, P3D);
@@ -46,6 +47,7 @@ public class Visualiser extends Visual {
         luyu_obj = new LuYu(this);
         circle_effect_obj = new circle_effect(this);
         mesh_line_obj = new Mesh_Line(this);
+        waterRipple_obj = new waterRipple(this);
     }
 
     public void draw() {
@@ -90,7 +92,7 @@ public class Visualiser extends Visual {
 
             case 6:
             {
-                // cs.render();
+                waterRipple_obj.render();
                 break;
             }
             

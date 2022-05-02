@@ -23,7 +23,7 @@ public class Main
 	public void testSketch()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new Mesh_Line());		
+        processing.core.PApplet.runSketch( a, new waterRipple());		
 	}
 
 	public static void main(String[] args)
