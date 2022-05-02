@@ -30,8 +30,9 @@ public class waterRipple extends PApplet {
     float dampening = (float) 0.93;
 
     public void settings() {
-        size(800, 600);
-        // fullScreen(P3D, SPAN);
+        size(1000, 800,  P3D);
+        fullScreen(P3D, SPAN);
+        smooth();
     }
 
     public void setup() {
@@ -52,11 +53,11 @@ public class waterRipple extends PApplet {
         previous = new float[cols][rows];
     }
 
-    public void mousePressed() {
-        // previous[mouseX][mouseY] = 255;
-        current[mouseX][mouseY] = 255;
+    // public void mousePressed() {
+    //     // previous[mouseX][mouseY] = 255;
+    //     current[mouseX][mouseY] = 255;
 
-    }
+    // }
 
     public void draw() {
         beat.detect(ab);

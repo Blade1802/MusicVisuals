@@ -31,7 +31,6 @@ public class circle_effect extends PApplet {
 
         ap.play();
         ab = ap.mix;
-        // colorMode(HSB);
 
     }
 

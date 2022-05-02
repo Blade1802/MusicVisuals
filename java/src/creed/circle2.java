@@ -79,7 +79,7 @@ public class circle2 extends PApplet {
             }
             // c = (c + 1) % 7;
             // fill(RGBval[c][0], RGBval[c][1], RGBval[c][2]);
-            fill(c1++%256,c2++%256,c3++%256);
+            fill(c1++%256, 255,c3++%256);
             
 
         }
