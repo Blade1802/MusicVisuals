@@ -62,8 +62,8 @@ public class Main {
 		// main.recordPlayer();
 		// main.musicViz();
 		// main.LuYu();
-		main.MeshLine();
-		// main.osclliopscope();
+		// main.MeshLine();
+		main.osclliopscope();
 		// main.Ripple();
 		// main.case_menu();
 		// main.circle_2();

@@ -20,46 +20,78 @@ public class Oscilloscope extends PApplet {
     int tbase = 1024;
     float[] myBuffer;
 
+    float[] lerpedBuffer;
+    float y = 0;
+    float smoothedY = 0;
+    float smoothedAmplitude = 0;
+
     // for background Image
     PImage bg;
 
     public void settings() {
-        // size(1024, 800, P3D);
-        // size(1920, 1080);
-
         fullScreen(P3D, SPAN);
-        // smooth();
+        // size(800, 400, P3D);
+        smooth();
     }
 
     public void setup() {
         minim = new Minim(this);
         ap = minim.loadFile(
-                "[YT2mp3.info] - Assassin_'s Creed II   Ezio_'s Family (Dubstep Remix) Remake (320kbps).mp3", 2048);
-        ap.play();
-        // in = minim.getLineIn(Minim.MONO, 2048);
+                "[YT2mp3.info] - Assassin_'s Creed II   Ezio_'s Family (Dubstep Remix) Remake (320kbps).mp3", 1024);
         ap.play();
         ab = ap.mix;
 
         myBuffer = new float[ap.bufferSize()];
 
-        bg = loadImage("assassins creed edited.png");
+        y = height / 2;
+        smoothedY = y;
+
+        lerpedBuffer = new float[width];
+
+        // bg = loadImage("assassins creed edited.png");
 
     }
+
+    float off = 0;
 
     // PImage creed = loadImage("assassins creed.jpg");
 
     public void draw() {
-        // colorMode(HSB);
-        colorMode(RGB);
-
-        tint(256);
-        background(bg);
+        colorMode(HSB);
+        // colorMode(RGB);
+        background(0);
 
         stroke(255);
         noFill();
-        strokeWeight(3);
+        strokeWeight(4);
 
-        ellipse(width / 2, height / 2, 240, 240);
+        float average = 0;
+        float sum = 0;
+        off += 1;
+
+        // Calculate sum and average of the samples
+        // Also lerp each element of buffer;
+        for(int i = 0 ; i < ab.size() ; i ++)
+        {
+            sum += abs(ab.get(i));
+            myBuffer[i] = lerp(myBuffer[i], ab.get(i), 0.05f);
+        }
+        average = sum / (float) ab.size();
+
+        smoothedAmplitude = lerp(smoothedAmplitude, average, 0.1f);
+        
+        float cx = width / 2;
+        float cy = height / 2;
+
+        float r = map(smoothedAmplitude, 0, 0.5f, 100, 2000);
+        float r1 = map(smoothedAmplitude, 0, 0.5f, 150, 2500);
+
+        float c = map(smoothedAmplitude, 0, 0.5f, 0, 255);
+        stroke(c, 255, 255);
+        circle(cx, cy, r);
+        circle(cx,cy, r1);
+
+        // ellipse(width / 2, height / 2, 240, 240);
 
         translate(0, height / 2);
         stroke(255);
