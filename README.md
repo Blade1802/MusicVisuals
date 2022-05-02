@@ -30,6 +30,7 @@ We are proud of the overall project it was a bit challenging however, we had fun
 - Using the map function  to create a vibrant RGB color palette for circle2.java. 
 - Creating the octopus effect using circles for LUYU.java. 
 - For oscilloscope.java create two distinct lines which responds to every bit and amplitude of the song in their own nature in addition to creation of two concentric circles that change their radii on the amplitude and frequency as well.
+- Strings vibrating with the music, in every effect there is unique 
 
 
 
