@@ -62,10 +62,16 @@ public class Main
         processing.core.PApplet.runSketch( a, new Mesh_Line());		
 	}
 
+	public void circlemain()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new circlemain());		
+	}
+
 	public static void main(String[] args)
 	{
 		Main main = new Main();
-		main.circle2();
+		// main.circle2();
 		// main.waterRipple();
 		// main.rotating();
 		// main.BeatListener();
@@ -73,5 +79,6 @@ public class Main
 		// main.Audio1();
 		// main.LuYu();
 		// main.Mesh_Line();
+		main.circlemain();
 	}
 }

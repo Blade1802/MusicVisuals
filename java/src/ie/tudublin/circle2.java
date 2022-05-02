@@ -45,11 +45,15 @@ public class circle2 extends PApplet {
             ellipse(i, i, leftLevel, leftLevel);
             rotateZ((float) (n * - PI / 3 * 0.05));
             
-            fill(c1++%256,c2++%256,c3++%256);
+            // c1 keeps cycling through the colors
+            // c3 value matches max brightness when yellow is displayed, making yellow more prominent
+            fill(c1++%256,255,c3++%256); 
             
         }
 
         n += 0.008;
 
     }
+
+    
 }
