@@ -8,6 +8,7 @@ public class Visualiser extends Visual {
     circle circle_obj;
     MusicViz musicViz_obj;
     Oscilloscope oscilloscope_obj;
+    LuYu luyu_obj;
 
     public void settings() {
         // size(1024, 800, P3D);
@@ -40,6 +41,7 @@ public class Visualiser extends Visual {
         circle_obj = new circle(this);
         musicViz_obj = new MusicViz(this);
         oscilloscope_obj = new Oscilloscope(this);
+        luyu_obj = new LuYu(this);
     }
 
     public void draw() {
@@ -66,7 +68,7 @@ public class Visualiser extends Visual {
 
             case 3:
             {
-                // cs.render();
+                luyu_obj.render();
                 break;
             }
 

@@ -23,7 +23,7 @@ public class Main
 	public void testSketch()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new Oscilloscope());		
+        processing.core.PApplet.runSketch( a, new LuYu_edit());		
 	}
 
 	public static void main(String[] args)

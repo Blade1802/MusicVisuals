@@ -2,7 +2,7 @@ package Assignment;
 
 import processing.core.PApplet;
 
-public class circle extends PApplet{
+public class circle {
     Visualiser pa;
     float n = 0;
 
@@ -27,7 +27,7 @@ public class circle extends PApplet{
 
             float leftLevel = pa.getAudioPlayer().left.level() * 20;
             pa.ellipse(i, i, leftLevel, leftLevel);
-            pa.rotateZ((float) (n * - PI / 3 * 0.05));
+            pa.rotateZ((float) (n * - PApplet.PI / 3 * 0.05));
             
             // c1 keeps cycling through the colors
             // c3 value matches max brightness when yellow is displayed, making yellow more prominent
