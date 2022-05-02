@@ -6,6 +6,7 @@ import ie.tudublin.*;
 public class Visualiser extends Visual {
     // Class Objects
     circle circle_2;
+    oscillopscope oscillopscope;
 
 
     public void settings() {
@@ -37,6 +38,7 @@ public class Visualiser extends Visual {
 
         // Object Intialisation
         circle_2 = new circle(this);
+        oscillopscope = new oscillopscope(this);
 
     }
 
@@ -46,13 +48,13 @@ public class Visualiser extends Visual {
         {
             case 0:
             {
-                circle_2.render();
+                oscillopscope.render();
                 break;
             }
 
             case 1:
             {
-                // cs.render();
+                circle_2.render();
                 break;
             }
 
