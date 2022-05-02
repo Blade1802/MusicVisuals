@@ -2,6 +2,7 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 import ddf.minim.*;
+import ddf.minim.analysis.BeatDetect;
 import ddf.minim.analysis.FFT;
 
 public abstract class Visual extends PApplet
@@ -17,6 +18,7 @@ public abstract class Visual extends PApplet
 	private AudioPlayer ap;
 	private AudioBuffer ab;
 	private FFT fft;
+	private BeatDetect beat;
 
 	private float amplitude  = 0;
 	private float smothedAmplitude = 0;
@@ -28,6 +30,8 @@ public abstract class Visual extends PApplet
 		minim = new Minim(this);
 
 		fft = new FFT(frameSize, sampleRate);
+
+		beat = new BeatDetect();
 
 		bands = new float[(int) log2(frameSize)];
   		smoothedBands = new float[bands.length];
@@ -126,6 +130,10 @@ public abstract class Visual extends PApplet
 
 	public AudioBuffer getAudioBuffer() {
 		return ab;
+	}
+
+	public BeatDetect getBeatDetect() {
+		return beat;
 	}
 
 	public float getAmplitude() {
