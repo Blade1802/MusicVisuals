@@ -14,8 +14,9 @@ public class Visualiser extends Visual {
     waterRipple waterRipple_obj;
 
     public void settings() {
-        // size(1024, 800, P3D);
-        fullScreen(P3D, SPAN);
+        size(1366, 768, P3D);
+        // size(displayWidth, displayHeight);
+        fullScreen(P3D);
         smooth();
     }
 

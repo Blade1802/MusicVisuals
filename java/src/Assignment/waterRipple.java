@@ -1,5 +1,7 @@
 package Assignment;
 
+import processing.core.PApplet;
+
 public class waterRipple {
     Visualiser pa;
 

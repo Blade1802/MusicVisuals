@@ -32,6 +32,7 @@ public abstract class Visual extends PApplet
 		fft = new FFT(frameSize, sampleRate);
 
 		beat = new BeatDetect();
+		beat.setSensitivity(100);
 
 		bands = new float[(int) log2(frameSize)];
   		smoothedBands = new float[bands.length];
