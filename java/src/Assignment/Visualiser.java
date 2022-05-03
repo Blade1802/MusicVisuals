@@ -15,7 +15,8 @@ public class Visualiser extends Visual {
 
     public void settings() {
         // size(1024, 800, P3D);
-        fullScreen(P3D, SPAN);
+        size(displayHeight, displayWidth);
+        fullScreen(P3D);
         smooth();
     }
 
