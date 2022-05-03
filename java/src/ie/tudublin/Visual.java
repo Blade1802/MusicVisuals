@@ -31,6 +31,9 @@ public abstract class Visual extends PApplet
 		beat = new BeatDetect();
 		fft = new FFT(frameSize, sampleRate);
 
+		beat = new BeatDetect();
+		beat.setSensitivity(100);
+
 		bands = new float[(int) log2(frameSize)];
   		smoothedBands = new float[bands.length];
 
@@ -128,6 +131,10 @@ public abstract class Visual extends PApplet
 
 	public AudioBuffer getAudioBuffer() {
 		return ab;
+	}
+
+	public BeatDetect getBeatDetect() {
+		return beat;
 	}
 
 	public float getAmplitude() {

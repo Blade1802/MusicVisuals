@@ -20,10 +20,17 @@ public class Main
         processing.core.PApplet.runSketch( a, new Visualiser());		
 	}
 
+	public void testSketch()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new waterRipple());		
+	}
+
 	public static void main(String[] args)
 	{
 		Main main = new Main();
 		// main.startUI();
-		main.visualiser();			
+		main.visualiser();
+		// main.testSketch();			
 	}
 }

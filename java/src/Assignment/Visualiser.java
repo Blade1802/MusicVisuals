@@ -5,16 +5,22 @@ import ie.tudublin.*;
 
 public class Visualiser extends Visual {
     // Class Objects
-    circle circle_2;
-
+    circle circle_obj;
+    MusicViz musicViz_obj;
+    Oscilloscope oscilloscope_obj;
+    LuYu luyu_obj;
+    circle_effect circle_effect_obj;
+    Mesh_Line mesh_line_obj;
+    waterRipple waterRipple_obj;
 
     public void settings() {
-        // size(1024, 800, P3D);
-        fullScreen(P3D, SPAN);
+        // size(1366, 768, P3D);
+        size(displayWidth, displayHeight);
+        fullScreen(P3D);
         smooth();
     }
 
-    int mode = 0;
+    int mode = 6;
 
     public void keyPressed() {
         if (key >= '0' && key <= '9') {
@@ -36,8 +42,13 @@ public class Visualiser extends Visual {
         getAudioPlayer().play();
 
         // Object Intialisation
-        circle_2 = new circle(this);
-
+        circle_obj = new circle(this);
+        musicViz_obj = new MusicViz(this);
+        oscilloscope_obj = new Oscilloscope(this);
+        luyu_obj = new LuYu(this);
+        circle_effect_obj = new circle_effect(this);
+        mesh_line_obj = new Mesh_Line(this);
+        waterRipple_obj = new waterRipple(this);
     }
 
     public void draw() {
@@ -46,43 +57,43 @@ public class Visualiser extends Visual {
         {
             case 0:
             {
-                circle_2.render();
+                circle_obj.render();
                 break;
             }
 
             case 1:
             {
-                // cs.render();
+                musicViz_obj.render();
                 break;
             }
 
             case 2:
             {
-                // cs.render();
+                oscilloscope_obj.render();
                 break;
             }
 
             case 3:
             {
-                // cs.render();
+                luyu_obj.render();
                 break;
             }
 
             case 4:
             {
-                // cs.render();
+                circle_effect_obj.render();
                 break;
             }
 
             case 5:
             {
-                // cs.render();
+                mesh_line_obj.render();
                 break;
             }
 
             case 6:
             {
-                // cs.render();
+                waterRipple_obj.render();
                 break;
             }
             
