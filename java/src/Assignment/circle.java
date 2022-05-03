@@ -4,7 +4,7 @@ import processing.core.PApplet;
 
 public class circle {
     Visualiser pa;
-    float n = 0;
+    float n = 15;
 
     int c1 = 51;
     int c2 = 204;

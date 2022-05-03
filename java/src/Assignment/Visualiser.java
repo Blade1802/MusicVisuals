@@ -14,13 +14,13 @@ public class Visualiser extends Visual {
     waterRipple waterRipple_obj;
 
     public void settings() {
-        size(1366, 768, P3D);
-        // size(displayWidth, displayHeight);
+        // size(1366, 768, P3D);
+        size(displayWidth, displayHeight);
         fullScreen(P3D);
         smooth();
     }
 
-    int mode = 0;
+    int mode = 6;
 
     public void keyPressed() {
         if (key >= '0' && key <= '9') {
