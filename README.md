@@ -37,7 +37,7 @@ We are proud of the overall project it was a bit challenging however, we had fun
 Our motto for this project was to create something unique as a result we decided to develop the visualisation and transition on beats instead of creating the sketch and adding the music just as aa background. The color and effect changes on beats in addition to vibrant color patterns. We had an idea of transition effect that will change with every bit. Everytime when beats drops and then it goes up, we see a new effect in that effect, with a differnt color. 
 
 # Project management
-- We all work 20 hours a week hence it was a bit difficult to get together at the same time hence we devoted the weekend nights for OOP project. Ideally we finished the project in 3 study sessions streteched for 10 hours each till 6:00 or 7:00 am.
+- We all work as part-time 20 hours a week hence it was a bit difficult to get together at the same time hence we devoted the weekend nights as well as few weekdays nights for OOP project. Ideally we finished the project in 3 study sessions streteched for 10 hours each till 6:00 or 7:00 am.
 - We are thankful to ONENOTE where we were able to share and edit the same idea board. 
 - During the weekdays we did the research and posted each other updated via Discord. 
 
