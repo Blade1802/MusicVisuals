@@ -44,5 +44,5 @@ Our motto for this project was to create something unique as a result we decided
 
 # Youtube video:
 
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
+[![YouTube](https://img.youtube.com/vi/NW0Q_yS2Hpo/0.jpg)](https://youtu.be/NW0Q_yS2Hpo)
 
