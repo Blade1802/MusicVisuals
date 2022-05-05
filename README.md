@@ -27,13 +27,13 @@ This project uses .java files and processing to add an animated component to the
 The main function calls the visualiser.java class. Visualiser.java is the driver file for this project. It creates an object for each individual .java file. The render function of an object is called for the respective key pressed.
 
 ```java
-circle circle_obj;
-MusicViz musicViz_obj;
-Oscilloscope oscilloscope_obj;
-LuYu luyu_obj;
-circle_effect circle_effect_obj;
-Mesh_Line mesh_line_obj;
-waterRipple waterRipple_obj;
+circle_obj = new circle(this);
+musicViz_obj = new MusicViz(this);
+oscilloscope_obj = new Oscilloscope(this);
+luyu_obj = new LuYu(this);
+circle_effect_obj = new circle_effect(this);
+mesh_line_obj = new Mesh_Line(this);
+waterRipple_obj = new waterRipple(this);
 ```
 
 Our program works on the cases. We change between the cases <ins>manually</ins> using keys from **0-6**. We used the fading effect to avoid any distortion and making the transitions smooth.
